@@ -50,6 +50,9 @@ p {
   margin: 1.2em 0 0.6em;
 /*  text-indent: 0.6em; */
 }
+del {
+  text-decoration: line-through;
+}
 .block ul {
 margin:0;
 padding:0 0 0.25em;
@@ -272,6 +275,11 @@ ul.contextual-links a {
   background: #fff;
   background: rgba(255, 255, 255, 1.0);
 }
+.region-featured #navigation ul.links li.active-trail a {
+  background: #f0f0f0;
+  background: rgba(240, 240, 240, 1.0);
+}
+
 #navigation ul.links li {
   display:inline;
   list-style-type:none;
@@ -306,7 +314,6 @@ ul.contextual-links a {
   padding: 50px 0;
   margin: 0;
   background: #f0f0f0;
-  border-top:1px solid #FFFFFF;
   border-bottom: 1px solid #e7e7e7;
   text-shadow:1px 1px #fff;
 }
@@ -446,7 +453,7 @@ h1#page-title {
   font-size: 90%;
 }
 #comments .comment-arrow {
-  background: url(images/comment-arrow.gif);
+  background: url(../images/comment-arrow.gif);
   height:40px;
   width:20px;
   margin-left:-45px;
