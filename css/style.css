@@ -255,13 +255,14 @@ ul.contextual-links a {
   color: #333333;
   text-shadow:0 1px #EEEEEE;
   background: #ccc;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.78);
   border-top-left-radius: 8px;
   -webkit-border-top-left-radius: 8px;
   -moz-border-radius-topleft:8px;
   border-top-right-radius: 8px;
   -webkit-border-top-right-radius: 8px;
   -moz-border-radius-topright:8px; 
+  border-bottom:1px solid #FFFFFF;
 }
 #navigation ul.links li a:hover {
   background: #fff;
@@ -269,13 +270,14 @@ ul.contextual-links a {
 }
 #navigation ul.links li a:active {
   background: #b3b3b3;
-  background: rgba(255, 255, 255, 0.70);
+  background: rgba(255, 255, 255, 1);
 }
 #navigation ul.links li.active-trail a {
   background: #fff;
   background: rgba(255, 255, 255, 1.0);
+  border-bottom:none;
 }
-.region-featured #navigation ul.links li.active-trail a {
+.featured #navigation ul.links li.active-trail a {
   background: #f0f0f0;
   background: rgba(240, 240, 240, 1.0);
 }
