@@ -75,7 +75,7 @@ ul.contextual-links a {
   text-indent:-9999px;
 }
 #header {
-  background: #1A1A1A;  /* color me */
+  background: #1a1a1a;  /* color me */
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #fff;  /* color me */
   background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(0, 0, 0, 1)), to(rgba(70, 70, 70, 0.8)));
@@ -311,7 +311,7 @@ ul.contextual-links a {
   font-size: 180%;
   font-weight: normal;
   line-height: 1.4em;
-  padding: 50px 0;
+  padding: 50px 0 45px;
   margin: 0;
   background: #f0f0f0;
   border-bottom: 1px solid #e7e7e7;
@@ -531,7 +531,7 @@ h1#page-title {
 
 #footer-wrapper {
   background: #161617 url('images/footer-background.jpg') repeat-x top center;
-  padding: 35px 20px 20px;
+  padding: 35px 20px 30px;
   color: #7c7e84;
   font-size: 90%;
   font-family: Helvetica Neue, Helvetica, Arial, san-serif;
@@ -590,8 +590,11 @@ h1#page-title {
   font-size:92%;
   letter-spacing:0.2px;
   color: #5a5b5d;
-  margin-top: 40px;
+  margin-top: 30px;
   border-top: 1px solid #333436;
+}
+#footer .region {
+  margin-top: 20px;
 }
 #footer a {
   color: #5a5b5d;
@@ -627,12 +630,15 @@ div.tabs ul.primary li a {
 
 /* ---------------- Messages  ----------------- */
 
+#messages {
+  padding:20px 0 5px;
+}
 #messages div.status {
   background: #FCF6BE;
   border:1px solid #BBBBBB;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  margin:20px auto;
-  padding:20px;
+  margin:0 auto;
+  padding:15px;
   width:900px;
 }
 #messages div.error {
@@ -640,6 +646,9 @@ div.tabs ul.primary li a {
   margin:20px auto;
   padding:20px;
   width:900px;
+}
+.region-featured #messages {
+  background: #d2d2d2;
 }
 
 /* -------------- User Profile   -------------- */
