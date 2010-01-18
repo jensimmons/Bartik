@@ -1,0 +1,719 @@
+/* $Id$ */
+
+/* Designed and Created by 
+Jen Simmons
+Mikweed Media Design
+http://milkweedmediadesign.com
+for Drupal 7 
+December 2009
+*/
+
+.page-node-9 #main-wrapper{
+  display: none;
+}
+
+/* JEN's LIST OF THINGS TO DO:
+> replace the grid-system code with non-grid-system code?
+> make the sidebar css work so that if people leave the columns empty, they collapse
+> wrap the 3- and 4-across regions in conditional statements
+> can we shorten the number of characters in the teaser default? if so, then we can enlarge the font size
+> fix all the contextual links so they look the same
+>
+> put a color picker into play - to adjust header color, body font color, main link color,
+  perhaps also the header font color and header link color
+> create feature to upload an image into the header
+> create feature to hide the site title (by pushing it off the page, not getting rid of it altogether
+> create feature at change the "published by" wording without editing node.tpl manually
+> add code so that the current page is tagged in CSS with a class, and the tab for that page can be a diff color
+> change the CSS comment format once I'm done rewriting CSS
+> remove "last conformed to Drupal Head" comments from all tpl files (when ready - NOT YET!)
+> put the secondary menu into footer column region / or reskin it. Something.
+> create a proper screenshot http://drupal.org/node/647754
+*/
+
+/* ---------- Overall Specifications ---------- */
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #3b3b3b;  /* color me */
+  line-height: 1.4em;
+  font-size:0.8em;
+  word-wrap: break-word;
+}
+a {
+  color: #0073b6; /* color me */
+  text-decoration: none;
+}
+a:visited {
+/*  color: #396884; */
+}
+a:hover {
+  color: #018fe2; /* color me */
+}
+a:active {
+  color: #23aeff; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.0em 0 0.5em;
+  font-weight: inherit;
+}
+h1 {
+  font-size: 140%;
+  color: #000;
+}
+h2 {
+  font-size: 120%;
+}
+p {
+  margin: 1.2em 0 0.6em;
+/*  text-indent: 0.6em; */
+}
+.block ul {
+margin:0;
+padding:0 0 0.25em;
+}
+
+
+ul.contextual-links {
+  font-size: 90%;
+  color: #fb975b;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+ul.contextual-links a {
+  color: #fb975b;
+}
+
+/* ------------------ Header ------------------ */
+
+#skip-link {
+  position:absolute;
+  text-indent:-9999px;
+}
+#header {
+  background: #1A1A1A;  /* color me */
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #fff;  /* color me */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(0, 0, 0, 1)), to(rgba(70, 70, 70, 0.8)));
+}
+#header a  {
+  color: #fff;
+}
+#header a:hover  {
+  color: #b5b7b9;
+}
+#header a:active  {
+  color: #adb0bf;
+}
+#header #logo {
+  float: left;
+  padding: 15px 30px 15px 0;
+}
+#header #name-and-slogan {
+  padding-top:38px;
+  margin-bottom:30px;
+}
+#header #site-name {
+  font-size: 200%;
+  color: #686868;
+}
+#header h1#site-name {
+  margin:0;
+}
+#header #site-name a  {
+  font-weight: normal;
+}
+#header #site-slogan {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 7px;
+  font-size: 100%;
+  word-spacing:0.1em;  
+  font-style: italic;
+}
+#header div.block-menu, 
+#header div#block-system-main-menu,
+#header div#block-system-secondary-menu { /* menus when in the header region */
+  height: 1.1em;
+  margin: 10px 0;
+  font-size: 120%;
+  float: left;
+  width:75%;
+}
+#header .block-menu h2,
+#header #block-system-main-menu h2,
+#header #block-system-secondary-menu h2 {
+  display: none;
+}
+#header .block-menu h2,
+#header #block-system-main-menu h2,
+#header #block-system-secondary-menu h2 {
+  display: none;
+}
+#header .block ul,
+#header .block li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#header .block-menu li a,
+#header #block-system-main-menu li a,
+#header #block-system-secondary-menu li a {
+  float: left;
+  padding:0 12px;
+  display:block;
+  border-right:1px solid #555;
+}
+#header .block-menu li.first a,
+#header #block-system-main-menu li.first a,
+#header #block-system-secondary-menu li.first a {
+  padding-left: 0;
+}
+#header .block-menu li.last a,
+#header #block-system-main-menu li.last a,
+#header #block-system-secondary-menu li.last a {
+  padding-right: 0;
+  border-right: none;
+}
+#header #block-search-form { /* search block when in the header region */
+  float: right;
+  width:24%;
+  margin: 8px 0;
+}
+#header #block-user-login { /* login block when in the Header Region */
+  display: block;
+  position: absolute;
+  top:0;
+  right:2%;
+  background: #464748;
+  color: #fff;  
+  float: right;
+  font-size:13px;
+  padding:4px 10px 5px;
+  font-family: Helvetica, Arial, san-serif;
+  text-transform: uppercase;
+  font-size: 80%;
+}
+#header #block-user-login a {
+  color: #fff;
+  font-size: 90%;
+}
+#header #block-user-login h2 {
+  display: none;
+}
+#header #block-user-login .form-item label {
+  display:inline;
+  font-weight:normal;
+}
+#header #block-user-login .form-item {
+  display:inline;
+  font-weight:normal;
+}
+#header #block-user-login .form-text {
+  margin-right: 5px;
+}
+#header #block-user-login .form-item label .form-required {
+  display: none;
+}
+#header #block-user-login div.item-list,
+#header #block-user-login .item-list ul {
+  display:inline;
+}
+#header #block-user-login .item-list ul li {
+  display:inline;
+  margin:0 5px 0 15px;
+}
+#header #block-user-login div.item-list {
+  margin-top:5px;
+  font-style: italic;
+  font-family: Georgia,"Times New Roman",Times,serif;
+  font-size: 130%;
+  text-transform: none;
+}
+#header #block-user-login .userbox {
+  margin-left: 10px;
+}
+#header #block-user-login input.form-submit {
+  color: #fff;
+  background: #929599;
+  border: 1px solid #73767c;
+  padding: 1px;
+  text-transform: uppercase;
+  margin-top: 1px;
+  position:relative;
+  display: inline;
+}
+#header #block-user-login #user-login-form div.item-list { /* hide create new account + email replacement password links */
+  display: none;
+}
+
+
+/* --------------- Main Navigation ------------ */
+
+#navigation h2 {
+  margin-top: 0;  
+  display: none;
+}
+#navigation {
+  padding: 5x 15px;
+}
+#navigation a {
+  color: #d9d9d9;
+  padding: 0.6em 1em 0.4em;
+}
+#navigation ul {
+  padding:2px 0;
+}
+#navigation ul.links {
+  font-size: 105%;
+  padding:0.6em 0.6em 4px;
+}
+#navigation ul.links li a {
+  color: #333333;
+  text-shadow:0 1px #EEEEEE;
+  background: #ccc;
+  background: rgba(255, 255, 255, 0.8);
+  border-top-left-radius: 8px;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft:8px;
+  border-top-right-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+  -moz-border-radius-topright:8px; 
+}
+#navigation ul.links li a:hover {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+}
+#navigation ul.links li a:active {
+  background: #b3b3b3;
+  background: rgba(255, 255, 255, 0.70);
+}
+#navigation ul.links li.active-trail a {
+  background: #fff;
+  background: rgba(255, 255, 255, 1.0);
+}
+#navigation ul.links li {
+  display:inline;
+  list-style-type:none;
+  padding:0.6em 0 0.4em;
+}
+#navigation ul.links li.first {
+  padding-left: 2px;
+}
+
+
+/* ------------------- Main ------------------- */
+
+#main {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 120%:
+}
+
+.field-type-image {
+  float: left;
+  padding: 2px 20px 5px 0;
+}
+
+
+/* ----------------- Featured ----------------- */
+
+#featured {
+  text-align: center;
+  font-size: 180%;
+  font-weight: normal;
+  line-height: 1.4em;
+  padding: 50px 0;
+  margin: 0;
+  background: #f0f0f0;
+  border-top:1px solid #FFFFFF;
+  border-bottom: 1px solid #e7e7e7;
+  text-shadow:1px 1px #fff;
+}
+
+#featured div.section {
+  margin-left:auto;
+  margin-right:auto;
+  width:960px;
+}
+#featured p {
+  margin:0;
+  padding: 0;
+}
+
+
+/* ----------------- Content ------------------ */
+
+#content {
+/*  border-right:1px solid #E9E9E9;*/
+}
+#block-system-main {
+  font-size:115%;
+  line-height:1.5em;
+  color: #000;
+}
+h1#page-title {
+  font-size: 220%;
+}
+#block-system-main h2 {
+  margin-bottom: 2px;
+  font-size: 137%;
+}
+#block-system-main .node-teaser h2 a {
+  color: #181818;
+}
+#block-system-main .node-teaser {
+  border-bottom: 1px solid #D3D7D9;  
+  margin-bottom:30px;
+  padding-bottom:15px;
+}
+#block-system-main .node-teaser .content {
+  font-size: 92%;
+  line-height: 1.65em;
+  color: #3b3b3b;
+  clear: none;
+}
+#block-system-main div.user-picture img {
+  margin-left: 20px;
+}
+#block-system-main .meta {
+  font-family: Helvetica Neue, Helvetica, Arial, san-serif;
+  font-size: 80%;
+  color: #a8a8a8;
+  margin-bottom:-5px;
+}
+#block-system-main .submitted img {
+  float: right;
+}
+#block-system-main img {
+  margin: 0 0 15px;
+  border:1px solid #D3D7D9;
+}
+#block-system-main .node-teaser img {
+  margin: 0;
+}
+#block-system-main div.field-name-taxonomy-tags div.field-label,
+#block-system-main div.field-name-taxonomy-tags div.field-items,
+#block-system-main div.field-name-taxonomy-tags div.field-item {
+  font-family: Helvetica Neue, Helvetica, Arial, san-serif;
+  display: inline;
+  float:left;
+  padding-right: 10px;
+  font-weight: normal;
+}
+#block-system-main div.field-name-taxonomy-tags div.field-label {
+  font-size: 86%;
+  color: #68696b;
+}
+#block-system-main div.field-name-taxonomy-tags div.field-items,
+#block-system-main div.field-name-taxonomy-tags div.field-item {
+  font-size: 95%;
+}
+#block-system-main div.field-name-taxonomy-tags a:hover {
+  text-decoration: underline;
+}
+#block-system-main #link-wrapper {
+  margin-left:236px;
+}
+#block-system-main ul.links {
+  font-family: Helvetica Neue, Helvetica, Arial, san-serif;
+  color: #68696b;
+  font-size: 80%;  
+}
+#block-system-main ul.links .comment_add .active {
+  display: none;
+}
+
+
+/* ----------------- Comments ----------------- */
+
+#comment-wrapper {
+  border-top:1px solid #D3D7D9;
+  padding-top:15px;
+}
+#comment-wrapper h2.comments {
+  margin-bottom:1em;
+}
+.node-teaser #comment-wrapper {
+  display: none;
+}
+#comment-wrapper  div.user-picture img {
+  margin-left: 0;
+}
+
+#comments .comment {
+  margin-bottom: 20px;
+}
+#comments .attribution {
+  float: left;
+  width:110px;
+}
+#comments .attribution img {
+  margin: 0;
+  border:1px solid #D3D7D9;
+}
+#comments .submitted p {
+  margin: 4px 0;
+  font-family:Helvetica Neue,Helvetica,Arial,san-serif;
+  font-size:110%;
+  line-height: 1.2em;
+}
+#comments .submitted .comment-time {
+  font-size:70%;
+  color: #68696b;
+}
+#comments .content {
+  font-size: 90%;
+}
+#comments .comment-arrow {
+  background: url(images/comment-arrow.gif);
+  height:40px;
+  width:20px;
+  margin-left:-45px;
+  margin-top:10px;
+  position:absolute;
+}
+#comments .comment-text {
+  margin-left:140px;
+  padding:10px 25px;
+  border: 1px solid #D3D7D9;
+}
+#comments .indented {
+  margin-left:40px;
+}
+
+
+/* ------------------ Sidebar ----------------- */
+
+.sidebar .block {
+  padding: 15px 20px;
+  margin: 20px 0;
+  border: 1px solid #dcdcdc; 
+  -webkit-border: 1px solid #e0e0e0; 
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  background: #f0f0f0;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(247, 247, 247, 1)), to(rgba(240, 240, 240, 1)));
+}
+.sidebar h2 {
+  margin:0 0 0.5em;
+  border-bottom: 1px solid #d6d6d6; 
+  padding-bottom:5px;
+  text-shadow:0 1px 0 #FFFFFF;
+}
+.sidebar tbody {
+  border:none;
+}
+.sidebar tr.even, 
+.sidebar tr.odd {
+  background:none;
+  border-bottom: 1px solid #d6d6d6; 
+}
+
+/* ----------------- Triptych ----------------- */
+
+#triptych-wrapper {
+  background:#fafafa url('images/triptych-background.jpg') repeat-x top center;
+  border-top:1px solid #d3d7d9;
+}
+#triptych {
+  margin-left:auto;
+  margin-right:auto;
+  width:960px;
+}
+#triptych-first,
+#triptych-middle,
+#triptych-last {
+  display:inline;
+  float:left;
+  position:relative;
+  width:290px;
+  margin: 20px 15px 30px;
+}
+#triptych h2 {
+  color:#000000;
+  font-size:200%;
+  margin-bottom:1em;
+  text-align:center;
+  text-shadow:0px 1px 0 #fff;
+}
+
+
+/* ------------------ Footer ------------------ */
+
+#footer-wrapper {
+  background: #161617 url('images/footer-background.jpg') repeat-x top center;
+  padding: 35px 20px 20px;
+  color: #7c7e84;
+  font-size: 90%;
+  font-family: Helvetica Neue, Helvetica, Arial, san-serif;
+}
+#footer-wrapper a {
+  color: #7c7e84;
+}
+#footer-wrapper a:hover {
+  color: #b7b8b8;
+}
+
+#footer-wrapper div.block {
+  margin: 20px 0;
+  border:1px solid #38393B;
+  padding: 10px;
+}
+#footer-wrapper #block-system-main-menu,
+#footer-wrapper #block-system-secondary-menu,
+#footer-wrapper .section div.block-menu,
+#footer-wrapper #footer .block {
+  margin: 0;
+  padding: 0;
+  border:none;
+}
+#footer-wrapper h2 {
+  border-bottom:1px solid #38393B;
+  color:#7c7e84;
+  font-size:104%;
+  margin-bottom:0;
+  padding-bottom:3px;
+  text-transform:uppercase;
+}
+#footer-wrapper ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0
+}
+#footer-wrapper li {
+  list-style:none;
+  margin:0;
+  padding: 0;
+}
+#footer-wrapper li a {
+  display: block;
+  border-bottom:1px solid #38393B;
+  line-height:1.2em;
+  padding:0.8em 2px 0.8em 20px;
+  text-indent:-15px;
+  background: 
+}
+#footer-wrapper li a:hover {
+  background: #1f1f21;
+}
+#footer {
+  text-align: center;
+  font-size:92%;
+  letter-spacing:0.2px;
+  color: #5a5b5d;
+  margin-top: 40px;
+  border-top: 1px solid #333436;
+}
+#footer a {
+  color: #5a5b5d;
+  border-bottom: 1px dotted #5a5b5d;
+}
+#footer a:hover {
+  border-bottom: 1px dotted #5a5b5d;
+}
+
+
+/* --------------- System Tabs  --------------- */
+
+div.tabs {
+  margin-bottom: 20px;
+}
+div.tabs ul.primary {
+  padding:10px 0 3px 1em;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+div.tabs ul.primary li a {
+  border-top-left-radius: 6px;
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft:6px;
+  border-top-right-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright:6px;
+  padding-top:3px;
+  padding-bottom:3px;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+}
+
+
+/* ---------------- Messages  ----------------- */
+
+#messages div.status {
+  background: #FCF6BE;
+  border:1px solid #BBBBBB;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin:20px auto;
+  padding:20px;
+  width:900px;
+}
+#messages div.error {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin:20px auto;
+  padding:20px;
+  width:900px;
+}
+
+/* -------------- User Profile   -------------- */
+
+.profile .user-picture {
+  float:none;
+}
+
+
+/* -------------- Form Elements   ------------- */
+
+fieldset {
+  background:#fbfbfb none repeat scroll 0 0;
+  border:1px solid #ccc;
+  padding:10px 25px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+fieldset.collapsed {
+  background: #fff;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+input {
+  border-color:#ccc;
+  border-style:solid;
+  border-width:1px;
+  margin:2px 0;
+  padding:4px;
+}
+input.form-submit {
+  border-color:#ccc;
+  border-style:solid;
+  border-width:1px;
+  margin:2px 0;
+  padding:3px;
+  background: #fff;
+}
+#user-profile-form input#edit-submit {
+  margin-left: 500px;
+}
+.password-suggestions ul li {
+  margin-left: 1.2em;
+}
+.form-item {
+  margin-bottom:1em;
+  margin-top:2px;
+}
+.form-item label {
+  font-size:90%;
+}
+fieldset .description {
+  margin-top: 5px;
+  line-height: 1.4em;
+  color:#3c3c3c;
+  font-style:italic;
+}
+
+/* -------------- Other Overrides ------------- */
+
+div.password-suggestions {
+  border:0;
+}

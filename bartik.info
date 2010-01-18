@@ -1,0 +1,33 @@
+;$Id$
+
+name = Bartik
+description = A flexible theme with multiple regions, written with well-formed code. Suitable to be used for building your own theme. 
+version = VERSION
+core = 7.x
+engine = phptemplate
+
+stylesheets[screen][] = css/reset.css
+stylesheets[all][] = css/960.css
+stylesheets[all][] = css/layout.css
+stylesheets[screen][] = css/style.css
+
+regions[header] = Header
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlight] = Highlight
+
+regions[featured] = Featured
+regions[content] = Content
+regions[sidebar_first] = Sidebar First
+regions[sidebar_second] = Sidebar Second
+
+regions[triptych_first] = Triptych first
+regions[triptych_middle] = Triptych middle
+regions[triptych_last] = Triptych last
+
+regions[footer_firstcolumn] = Footer first column
+regions[footer_secondcolumn] = Footer second column
+regions[footer_thirdcolumn] = Footer third column
+regions[footer_fourthcolumn] = Footer fourth column
+regions[footer] = Footer
