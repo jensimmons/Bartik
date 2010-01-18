@@ -12,25 +12,6 @@ December 2009
   display: none;
 }
 
-/* JEN's LIST OF THINGS TO DO:
-> replace the grid-system code with non-grid-system code?
-> make the sidebar css work so that if people leave the columns empty, they collapse
-> wrap the 3- and 4-across regions in conditional statements
-> can we shorten the number of characters in the teaser default? if so, then we can enlarge the font size
-> fix all the contextual links so they look the same
->
-> put a color picker into play - to adjust header color, body font color, main link color,
-  perhaps also the header font color and header link color
-> create feature to upload an image into the header
-> create feature to hide the site title (by pushing it off the page, not getting rid of it altogether
-> create feature at change the "published by" wording without editing node.tpl manually
-> add code so that the current page is tagged in CSS with a class, and the tab for that page can be a diff color
-> change the CSS comment format once I'm done rewriting CSS
-> remove "last conformed to Drupal Head" comments from all tpl files (when ready - NOT YET!)
-> put the secondary menu into footer column region / or reskin it. Something.
-> create a proper screenshot http://drupal.org/node/647754
-*/
-
 /* ---------- Overall Specifications ---------- */
 
 body {
