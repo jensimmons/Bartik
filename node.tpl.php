@@ -81,7 +81,6 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
-
   <?php if (!$page): ?>
     <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $node_title; ?></a></h2>
   <?php endif; ?>
@@ -112,14 +111,11 @@
       print render($content);
     ?>
   </div>
+
   <div id="link-wrapper">
     <?php print render($content['links']); ?>
   </div>
-  
-  <?php if ($content['comments']): ?> <!-- This if statement is not working. Comment wrapper prints whether there are comments or not.  -->
-    <div id="comment-wrapper">
-      <?php print render($content['comments']); ?>
-    </div>
-  <?php endif; ?>
+
+  <?php print render($content['comments']); ?>
 
 </div>
