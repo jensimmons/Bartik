@@ -409,9 +409,6 @@ h1#page-title {
   color: #68696b;
   font-size: 80%;  
 }
-#block-system-main ul.links .comment_add .active {
-  display: none;
-}
 
 
 /* ----------------- Comments ----------------- */

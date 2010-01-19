@@ -114,7 +114,11 @@
   </div>
 
   <div id="link-wrapper">
-    <?php print render($content['links']); ?>
+    <?php
+      // Remove the "Add new comment" link.
+      unset($content['links']['comment']['#links']['comment_add']);
+      print render($content['links']);
+    ?>
   </div>
 
   <?php print render($content['comments']); ?>
