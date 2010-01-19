@@ -113,13 +113,17 @@
     ?>
   </div>
 
-  <div id="link-wrapper">
-    <?php
-      // Remove the "Add new comment" link.
-      unset($content['links']['comment']['#links']['comment_add']);
-      print render($content['links']);
-    ?>
-  </div>
+  <?php
+    // Remove the "Add new comment" link.
+    unset($content['links']['comment']['#links']['comment_add']);
+    $links = render($content['links']);
+    // Only display the wrapper div if there are links.
+    if ($links):
+  ?>
+    <div id="link-wrapper">
+      <?php print $links; ?>
+    </div>
+  <?php endif; ?>
 
   <?php print render($content['comments']); ?>
 
