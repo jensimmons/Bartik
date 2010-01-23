@@ -71,6 +71,7 @@ ul.contextual-links a {
 }
 #header {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: #1a1a1a;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(0, 0, 0, 1)), to(rgba(70, 70, 70, 0.8)));
 }
 #header a  {
@@ -523,7 +524,6 @@ h1#page-title {
 
 #footer-wrapper {
   background: #161617 url('images/footer-background.jpg') repeat-x top center;
-  background: url('images/footer-background.jpg') repeat-x top center;
   padding: 35px 20px 30px;
   color: #7c7e84;
   font-size: 90%;
