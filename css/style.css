@@ -523,6 +523,7 @@ h1#page-title {
 
 #footer-wrapper {
   background: #161617 url('images/footer-background.jpg') repeat-x top center;
+  background: url('images/footer-background.jpg') repeat-x top center;
   padding: 35px 20px 30px;
   color: #7c7e84;
   font-size: 90%;
