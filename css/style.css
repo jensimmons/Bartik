@@ -16,20 +16,15 @@ December 2009
 
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: #3b3b3b;  /* color me */
   line-height: 1.4em;
   font-size:0.8em;
   word-wrap: break-word;
 }
 a {
-  color: #0073b6; /* color me */
   text-decoration: none;
 }
 a:visited {
 /*  color: #396884; */
-}
-a:hover {
-  color: #018fe2; /* color me */
 }
 a:active {
   color: #23aeff; 
@@ -75,9 +70,7 @@ ul.contextual-links a {
   text-indent:-9999px;
 }
 #header {
-  background: #1a1a1a;  /* color me */
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  color: #fff;  /* color me */
   background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(0, 0, 0, 1)), to(rgba(70, 70, 70, 0.8)));
 }
 #header a  {
