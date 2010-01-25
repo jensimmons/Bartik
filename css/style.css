@@ -8,6 +8,22 @@ for Drupal 7
 December 2009
 */
 
+/* The colors of these items will be changed by color.module. */
+
+body, #block-system-main {
+  color: #3b3b3b;
+}
+a {
+  color: #0073b6;
+}
+#header {
+  background-color: #000000;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000000), to(#3d3d3d));
+  background-image: -moz-linear-gradient(-90deg, #000000, #3d3d3d);
+}
+
+/* Color Module: Don't touch */
+
 .page-node-9 #main-wrapper{
   display: none;
 }
@@ -71,8 +87,6 @@ ul.contextual-links a {
 }
 #header {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  background-color: #1a1a1a;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(0, 0, 0, 1)), to(rgba(70, 70, 70, 0.8)));
 }
 #header a  {
   color: #fff;
@@ -333,7 +347,6 @@ ul.contextual-links a {
 #block-system-main {
   font-size:115%;
   line-height:1.5em;
-  color: #000;
 }
 h1#page-title {
   font-size: 220%;
