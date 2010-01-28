@@ -39,8 +39,8 @@ body {
 a {
   text-decoration: none;
 }
-a:visited {
-/*  color: #396884; */
+a:hover {
+  color: #018fe2;
 }
 a:active {
   color: #23aeff; 
@@ -69,7 +69,6 @@ margin:0;
 padding:0 0 0.25em;
 }
 
-
 ul.contextual-links {
   font-size: 90%;
   color: #fb975b;
@@ -87,6 +86,7 @@ ul.contextual-links a {
 }
 #header {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #ffffff;
 }
 #header a  {
   color: #fff;
