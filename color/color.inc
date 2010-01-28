@@ -5,6 +5,7 @@ $info = array(
   // Pre-defined color schemes.
   'schemes' => array(
     '#ffffff,#0073b6,#000000,#3d3d3d,#3b3b3b' => t('Bartik Default'),
+    '#ffffff,#0073b6,#2385c2,#5ab5ee,#3b3b3b' => t('Blue Lagoon'),    
   ),
 
   // CSS files (excluding @import) to rewrite with new color scheme.
