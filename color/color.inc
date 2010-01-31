@@ -14,7 +14,7 @@ $info = array(
   'css' => array(
     'css/color.css',
   ),
-  
+
   // Files to copy
   'copy' => array(
     'logo.png',
