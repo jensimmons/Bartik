@@ -30,17 +30,19 @@
  * @see theme_comment_wrapper()
  */
 ?>
-<div id="comments-wrapper"><div id="comments" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <?php if ($node->type != 'forum'): ?>
-    <h2 class="comments"><?php print t('Comments'); ?></h2>
-  <?php endif; ?>
+<div id="comments-wrapper">
+  <div id="comments" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+    <?php if ($node->type != 'forum'): ?>
+      <h2 class="comments"><?php print t('Comments'); ?></h2>
+    <?php endif; ?>
 
-  <?php print render($content['comments']); ?>
+    <?php print render($content['comments']); ?>
 
-  <?php if ($content['comment_form']): ?>
-    <h2 class="title"><?php print t('Post new comment'); ?></h2>
-    <div>
-      <?php print render($content['comment_form']); ?>
-    </div>
-  <?php endif; ?>
-</div></div>
+    <?php if ($content['comment_form']): ?>
+      <h2 class="title"><?php print t('Post new comment'); ?></h2>
+      <div>
+        <?php print render($content['comment_form']); ?>
+      </div>
+    <?php endif; ?>
+  </div>
+</div>

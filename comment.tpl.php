@@ -20,7 +20,7 @@
  *   Preprocess functions can reformat it by calling format_date() with the
  *   desired parameters on the $comment->changed variable.
  * - $new: New comment marker.
-  * - $permalink: Comment permalink.
+ * - $permalink: Comment permalink.
  * - $picture: Authors picture.
  * - $signature: Authors signature.
  * - $status: Comment status. Possible values are:
@@ -62,18 +62,16 @@
 
   <div class="attribution">
 
-    <?php print $picture ?>
+    <?php print $picture; ?>
 
     <div class="submitted">
       <?php print $permalink; ?>
-      <p class="commenter-name"><?php
-        print t('!username ',
-          array('!username' => $author));
-      ?></p>
-      <p class="comment-time"><?php
-        print t('!datetime.',
-          array('!datetime' => $created));
-      ?></p>
+      <p class="commenter-name">
+        <?php print t('!username ', array('!username' => $author)); ?>
+      </p>
+      <p class="comment-time">
+        <?php print t('!datetime.', array('!datetime' => $created)); ?>
+      </p>
     </div>
   </div>
 
@@ -84,9 +82,9 @@
       <span class="new"><?php print $new ?></span>
     <?php endif; ?>
 
-  <?php print render($title_prefix); ?>
-  <h3<?php print $title_attributes; ?>><?php print $title ?></h3>
-  <?php print render($title_suffix); ?>
+    <?php print render($title_prefix); ?>
+    <h3<?php print $title_attributes; ?>><?php print $title ?></h3>
+    <?php print render($title_suffix); ?>
 
     <div class="content"<?php print $content_attributes; ?>>
       <?php
