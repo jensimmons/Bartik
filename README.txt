@@ -28,6 +28,6 @@ default/sites/files/. It is this new copy that will have the CSS for the colors
 you specified. The original copy of color.css will stay in themes/bartik/css/, 
 but will no longer have any impact on the site's display. 
 
-If you are having trouble making changes directly to the stylesheet  Ñ you are 
-making changes but they aren't having an effect ÑÊthen try turning color module 
+If you are having trouble making changes directly to the stylesheet, if you are 
+making changes but they aren't having an effect, then try turning color module 
 off in the modules administration area.
