@@ -91,7 +91,10 @@
       <?php if ($display_submitted): ?>
         <span class="submitted">
           <?php print $user_picture; ?>
-          <?php print $published; ?>
+          <?php
+            print t('published by !username on !datetime',
+              array('!username' => $name, '!datetime' => $date));
+          ?>
         </span>
       <?php endif; ?>
 
