@@ -578,15 +578,17 @@ div.tabs ul.primary li a {
 #messages {
   padding:20px 0 5px;
 }
-#messages div.status {
+div.messages {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+div.status {
   background: #FCF6BE;
   border:1px solid #BBBBBB;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin:0 auto;
   padding:15px;
   width:900px;
 }
-#messages div.error {
+div.error {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin:20px auto;
   padding:20px;
