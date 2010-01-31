@@ -72,7 +72,7 @@
 
 <div id="page-wrapper"><div id="page">
 
-  <div id="header"><div class="section container-12 clearfix">
+  <div id="header"><div class="section clearfix">
 
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
@@ -103,7 +103,7 @@
     <?php print render($page['header']); ?>
 
     <?php if ($main_menu): ?>
-      <div id="navigation"><div class="section container-12 clearfix">
+      <div id="navigation"><div class="section clearfix">
         <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'clearfix')), 'heading' => t('Main menu'))); ?>
       </div></div> <!-- /.section, /#navigation -->
     <?php endif; ?>
@@ -111,7 +111,7 @@
   </div></div> <!-- /.section, /#header -->
 
   <?php if ($messages): ?>
-    <div id="messages"><div class="section container-12 clearfix">
+    <div id="messages"><div class="section clearfix">
       <?php print $messages; ?>
     </div></div> <!-- /.section, /#messages -->
   <?php endif; ?>
@@ -122,7 +122,7 @@
     </div></div> <!-- /.section, /#featured -->
   <?php endif; ?>
 
-  <div id="main-wrapper"><div id="main" class="container-12 clearfix">
+  <div id="main-wrapper"><div id="main" class="clearfix">
 
       <?php if ($breadcrumb): ?>
         <div id="breadcrumb"><?php print $breadcrumb; ?></div>
@@ -176,28 +176,28 @@
   <div id="footer-wrapper"><div class="section">
 
    <?php if ($page['footer_firstcolumn']): ?>  <!-- This should be a 4-part statement w/ ORs -->
-   <div id="footer-columns" class="container-12 clearfix">
+   <div id="footer-columns" class="clearfix">
     
       <?php if ($page['footer_firstcolumn']): ?>
-        <div id="footer-firstcolumn" class="region sitemap grid-3"><div class="section">
+        <div id="footer-firstcolumn" class="region sitemap"><div class="section">
           <?php print render($page['footer_firstcolumn']); ?>
         </div></div> <!-- /.section, /#footer-firstcolumn -->
       <?php endif; ?>           
       
       <?php if ($page['footer_secondcolumn']): ?>
-        <div id="footer-secondcolumn" class="region sitemap grid-3"><div class="section">
+        <div id="footer-secondcolumn" class="region sitemap"><div class="section">
           <?php print render($page['footer_secondcolumn']); ?>
         </div></div> <!-- /.section, /#footer-secondcolumn -->
       <?php endif; ?>  
       
       <?php if ($page['footer_thirdcolumn']): ?>
-        <div id="footer-thirdcolumn" class="region sitemap grid-3"><div class="section">
+        <div id="footer-thirdcolumn" class="region sitemap"><div class="section">
           <?php print render($page['footer_thirdcolumn']); ?>
         </div></div> <!-- /.section, /#footer-thirdcolumn -->
       <?php endif; ?>  
       
       <?php if ($page['footer_fourthcolumn']): ?>
-        <div id="footer-fourthcolumn" class="region sitemap grid-3"><div class="section">
+        <div id="footer-fourthcolumn" class="region sitemap"><div class="section">
           <?php print render($page['footer_fourthcolumn']); ?>
         </div></div> <!-- /.section, /#footer-fourthcolumn -->
       <?php endif; ?>  
@@ -205,7 +205,7 @@
     </div><!-- /#footer-columns -->
     <?php endif; ?>  
 
-    <div id="footer" class="container-12 clearfix">
+    <div id="footer" class="clearfix">
       <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
       <?php print render($page['footer']); ?>
     </div><!-- /#footer -->

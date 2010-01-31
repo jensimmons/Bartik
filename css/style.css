@@ -1,23 +1,5 @@
 /* $Id$ */
 
-/* The colors of these items will be changed by color.module. */
-
-body, #block-system-main {
-  color: #3b3b3b;
-}
-a {
-  color: #0073b6;
-}
-#header {
-  background-color: #000000;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000000), to(#3d3d3d));
-  background-image: -moz-linear-gradient(-90deg, #000000, #3d3d3d);
-}
-
-/* Color Module: Don't touch */ 
-/* Do not remove that ^ comment. It MUST stay to protect the CSS below. */
-
-
 /* ---------- Overall Specifications ---------- */
 
 body {
