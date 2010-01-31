@@ -41,3 +41,13 @@ function bartik_process_page(&$variables) {
     _color_page_alter($variables);
    }
 }
+
+/**
+* Override or insert variables into the node template.
+*/
+function bartik_process_node(&$variables) {
+  $published = theme_get_setting('authoring_' . $variables['node']->type) ?
+    theme_get_setting('authoring_' . $variables['node']->type) : t('Published by [node:author] on [node:created]');
+  //print $published;exit;
+  $variables['published'] = filter_xss_admin(token_replace($published, array('node' => $variables['node'])));
+}
