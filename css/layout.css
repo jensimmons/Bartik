@@ -1,5 +1,11 @@
 /* $Id$ */
 
+
+#featured div.section {
+  margin-left:auto;
+  margin-right:auto;
+  width:960px;
+}
 #content {
   display:inline;
   float: left;
@@ -23,6 +29,23 @@
   margin-left: 15px;
   margin-right: 15px;
   width:930px;
+}
+#triptych {
+  margin-left:auto;
+  margin-right:auto;
+  width:960px;
+}
+#triptych-first,
+#triptych-middle,
+#triptych-last {
+  display:inline;
+  float:left;
+  position:relative;
+  width:290px;
+  margin: 20px 15px 30px;
+}
+#footer-wrapper .section {
+  margin: 35px 20px 30px;
 }
 
 

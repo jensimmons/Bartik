@@ -15,7 +15,7 @@ a {
 }
 
 /* Color Module: Don't touch */ 
-/* ^^ Do not remove that comment. It MUST stay to protect all CSS below from Color Module robots. */
+/* Do not remove that ^ comment. It MUST stay to protect the CSS below. */
 
 
 /* ---------- Overall Specifications ---------- */
@@ -26,7 +26,8 @@ body {
   font-size:0.8em;
   word-wrap: break-word;
 }
-a {
+a:link,
+a:visited {
   text-decoration: none;
 }
 a:hover {
@@ -35,7 +36,6 @@ a:hover {
 a:active {
   color: #23aeff; 
 }
-
 h1, h2, h3, h4, h5, h6 {
   margin: 1.0em 0 0.5em;
   font-weight: inherit;
@@ -49,7 +49,6 @@ h2 {
 }
 p {
   margin: 1.2em 0 0.6em;
-/*  text-indent: 0.6em; */
 }
 del {
   text-decoration: line-through;
@@ -58,14 +57,11 @@ del {
 margin:0;
 padding:0 0 0.25em;
 }
-
 ul.contextual-links {
   font-size: 90%;
-  color: #fb975b;
   font-family: Arial, sans-serif;
 }
 ul.contextual-links a {
-  color: #fb975b;
 }
 
 /* ------------------ Header ------------------ */
@@ -279,7 +275,6 @@ ul.contextual-links a {
   background: #f0f0f0;
   background: rgba(240, 240, 240, 1.0);
 }
-
 #navigation ul.links li {
   display:inline;
   list-style-type:none;
@@ -316,12 +311,6 @@ ul.contextual-links a {
   background: #f0f0f0;
   border-bottom: 1px solid #e7e7e7;
   text-shadow:1px 1px #fff;
-}
-
-#featured div.section {
-  margin-left:auto;
-  margin-right:auto;
-  width:960px;
 }
 #featured p {
   margin:0;
@@ -363,7 +352,7 @@ h1#page-title {
   margin-left: 20px;
 }
 #block-system-main .meta {
-  font-family: Helvetica Neue, Helvetica, Arial, san-serif;
+  font-family: Arial, san-serif;
   font-size: 80%;
   color: #a8a8a8;
   margin-bottom:-5px;
@@ -381,7 +370,7 @@ h1#page-title {
 #block-system-main div.field-name-taxonomy-tags div.field-label,
 #block-system-main div.field-name-taxonomy-tags div.field-items,
 #block-system-main div.field-name-taxonomy-tags div.field-item {
-  font-family: Helvetica Neue, Helvetica, Arial, san-serif;
+  font-family: Arial, san-serif;
   display: inline;
   float:left;
   padding-right: 10px;
@@ -402,7 +391,7 @@ h1#page-title {
   margin-left:236px;
 }
 #block-system-main ul.links {
-  font-family: Helvetica Neue, Helvetica, Arial, san-serif;
+  font-family: Arial, san-serif;
   color: #68696b;
   font-size: 80%;  
 }
@@ -423,7 +412,6 @@ h1#page-title {
 #comment-wrapper  div.user-picture img {
   margin-left: 0;
 }
-
 #comments .comment {
   margin-bottom: 20px;
 }
@@ -437,7 +425,7 @@ h1#page-title {
 }
 #comments .submitted p {
   margin: 4px 0;
-  font-family:Helvetica Neue,Helvetica,Arial,san-serif;
+  font-family:Arial,san-serif;
   font-size:110%;
   line-height: 1.2em;
 }
@@ -497,22 +485,8 @@ h1#page-title {
 /* ----------------- Triptych ----------------- */
 
 #triptych-wrapper {
-  background:#fafafa url('images/triptych-background.jpg') repeat-x top center;
+  background:#fafafa url(images/triptych-background.jpg) repeat-x top center;
   border-top:1px solid #d3d7d9;
-}
-#triptych {
-  margin-left:auto;
-  margin-right:auto;
-  width:960px;
-}
-#triptych-first,
-#triptych-middle,
-#triptych-last {
-  display:inline;
-  float:left;
-  position:relative;
-  width:290px;
-  margin: 20px 15px 30px;
 }
 #triptych h2 {
   color:#000000;
@@ -526,11 +500,10 @@ h1#page-title {
 /* ------------------ Footer ------------------ */
 
 #footer-wrapper {
-  background: #161617 url('images/footer-background.jpg') repeat-x top center;
-  padding: 35px 20px 30px;
+  background: #161617 url(images/footer-background.jpg) repeat-x top center;
   color: #7c7e84;
   font-size: 90%;
-  font-family: Helvetica Neue, Helvetica, Arial, san-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, san-serif;
 }
 #footer-wrapper a {
   color: #7c7e84;

@@ -12,7 +12,7 @@ $info = array(
 
   // CSS files (excluding @import) to rewrite with new color scheme.
   'css' => array(
-    'css/style.css',
+    'css/color-module-colors.css',
   ),
   
   // Files to copy
