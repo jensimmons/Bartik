@@ -35,7 +35,7 @@
  *   the site, if they have been configured.
  * - $breadcrumb: The breadcrumb trail for the current page.
  *
-* Page content (in order of occurrence in the default page.tpl.php):
+ * Page content (in order of occurrence in the default page.tpl.php):
  * - $title_prefix (array): An array containing additional output populated by
  *   modules, intended to be displayed in front of the main title tag that
  *   appears in the template.
@@ -60,7 +60,6 @@
  * - $page['highlight']: Items for the highlighted content region.
  * - $page['content']: The main content of the current page.
  * - $page['sidebar_first']: Items for the first sidebar.
- * - $page['sidebar_second']: Items for the second sidebar.
  * - $page['header']: Items for the header region.
  * - $page['footer']: Items for the footer region.
  * 
@@ -132,13 +131,20 @@
         <?php if ($page['highlight']): ?><div id="highlight"><?php print render($page['highlight']); ?></div><?php endif; ?>
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
-        <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+        <?php if ($title): ?>
+          <h1 class="title" id="page-title"><?php print $title; ?></h1>
+        <?php endif; ?>
         <?php print render($title_suffix); ?>
-        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+        <?php if ($tabs): ?>
+          <div class="tabs"><?php print render($tabs); ?></div>
+        <?php endif; ?>
         <?php print render($page['help']); ?>
-        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+        <?php if ($action_links): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
         <?php print render($page['content']); ?>
         <?php print $feed_icons; ?>
+        
       </div></div> <!-- /.section, /#content -->
 
       <?php if ($page['sidebar_first']): ?>
@@ -167,7 +173,7 @@
       <?php if ($page['triptych_last']): ?>
         <div id="triptych-last" class="region triptych"><div class="section">
           <?php print render($page['triptych_last']); ?>
-        </div></div> <!-u- /.section, /#triptych-last -->
+        </div></div> <!-- /.section, /#triptych-last -->
       <?php endif; ?>      
       
     </div></div> <!-- /#triptych, /#triptych-wrapper -->
