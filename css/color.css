@@ -1,6 +1,8 @@
 /* $Id$ */
 
-/* The colors of these items will be changed by color.module. */
+/**
+* Styles and colors that the color module will modify.
+*/
 
 body, #block-system-main {
   color: #3b3b3b;

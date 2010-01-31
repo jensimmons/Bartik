@@ -48,6 +48,5 @@ function bartik_process_page(&$variables) {
 function bartik_process_node(&$variables) {
   $published = theme_get_setting('authoring_' . $variables['node']->type) ?
     theme_get_setting('authoring_' . $variables['node']->type) : t('Published by [node:author] on [node:created]');
-  //print $published;exit;
   $variables['published'] = filter_xss_admin(token_replace($published, array('node' => $variables['node'])));
 }

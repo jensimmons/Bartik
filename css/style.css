@@ -661,3 +661,7 @@ fieldset .description {
 div.password-suggestions {
   border:0;
 }
+.ui-widget-overlay {
+  background:#222222;
+  opacity:0.7;
+}
