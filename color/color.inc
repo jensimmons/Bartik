@@ -12,7 +12,7 @@ $info = array(
 
   // CSS files (excluding @import) to rewrite with new color scheme.
   'css' => array(
-    'css/color-module-colors.css',
+    'css/color.css',
   ),
   
   // Files to copy
@@ -28,8 +28,7 @@ $info = array(
 
   // Coordinates of all the theme slices (x, y, width, height)
   // with their filename as used in the stylesheet.
-  'slices' => array(
-  ),
+  'slices' => array(),
 
   // Reference color used for blending. Matches the base.png's colors.
   'blend_target' => '#ffffff',
