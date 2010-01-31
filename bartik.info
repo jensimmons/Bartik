@@ -1,7 +1,7 @@
 ;$Id$
 
 name = Bartik
-description = A flexible theme with many regions. Suitable for hacking to make your own theme. 
+description = A flexible theme with many regions. Suitable for hacking to make your own theme.
 version = VERSION
 core = 7.x
 engine = phptemplate
@@ -16,7 +16,7 @@ regions[header] = Header
 regions[help] = Help
 regions[page_top] = Page top
 regions[page_bottom] = Page bottom
-regions[highlight] = Highlighted 
+regions[highlight] = Highlighted
 
 regions[featured] = Featured
 regions[content] = Content
