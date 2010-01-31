@@ -1,13 +1,5 @@
 /* $Id$ */
 
-/* Designed and Created by 
-Jen Simmons
-Mikweed Media Design
-http://milkweedmediadesign.com
-for Drupal 7 
-December 2009
-*/
-
 /* The colors of these items will be changed by color.module. */
 
 body, #block-system-main {
@@ -22,11 +14,9 @@ a {
   background-image: -moz-linear-gradient(-90deg, #000000, #3d3d3d);
 }
 
-/* Color Module: Don't touch */
+/* Color Module: Don't touch */ 
+/* ^^ Do not remove that comment. It MUST stay to protect all CSS below from Color Module robots. */
 
-.page-node-9 #main-wrapper{
-  display: none;
-}
 
 /* ---------- Overall Specifications ---------- */
 
@@ -72,7 +62,7 @@ padding:0 0 0.25em;
 ul.contextual-links {
   font-size: 90%;
   color: #fb975b;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: Arial, sans-serif;
 }
 ul.contextual-links a {
   color: #fb975b;

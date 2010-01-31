@@ -1,7 +1,7 @@
 ;$Id$
 
 name = Bartik
-description = A flexible theme with multiple regions, written with well-formed code. Suitable to be used for building your own theme. 
+description = A flexible theme with multiple regions, written with well-formed code. Suitable for building your own theme. 
 version = VERSION
 core = 7.x
 engine = phptemplate
@@ -19,8 +19,7 @@ regions[highlight] = Highlight
 
 regions[featured] = Featured
 regions[content] = Content
-regions[sidebar_first] = Sidebar First
-regions[sidebar_second] = Sidebar Second
+regions[sidebar_first] = Sidebar
 
 regions[triptych_first] = Triptych first
 regions[triptych_middle] = Triptych middle
