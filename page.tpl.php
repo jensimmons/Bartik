@@ -1,8 +1,6 @@
 <?php
 // $Id$
 
-// Last conformed to D7 Head - v 1.42 2010/01/08 07:36:53 webchick
-
 /**
  * @file
  * Default theme implementation to display a single Drupal page.
@@ -62,13 +60,12 @@
  * - $page['sidebar_first']: Items for the first sidebar.
  * - $page['header']: Items for the header region.
  * - $page['footer']: Items for the footer region.
- * 
+ *
  * @see template_preprocess()
  * @see template_preprocess_page()
  * @see template_process()
  */
 ?>
-
 <div id="page-wrapper"><div id="page">
 
   <div id="header"><div class="section clearfix">
@@ -81,21 +78,27 @@
 
     <?php if ($site_name || $site_slogan): ?>
       <div id="name-and-slogan">
+
         <?php if ($site_name): ?>
           <?php if ($title): ?>
-            <div id="site-name"><strong>
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </strong></div>
-          <?php else: /* Use h1 when the content title is empty */ ?>
-              <h1 id="site-name">
+            <div id="site-name"<?php if (!$show_site_name) { print ' class="header-hidden"'; } ?>>
+              <strong>
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-              </h1>
+              </strong>
+            </div>
+          <?php else: /* Use h1 when the content title is empty */ ?>
+            <h1 id="site-name"<?php if (!$show_site_name) { print ' class="header-hidden"'; } ?>>
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
+            </h1>
           <?php endif; ?>
         <?php endif; ?>
 
         <?php if ($site_slogan): ?>
-          <div id="site-slogan"><?php print $site_slogan; ?></div>
+          <div id="site-slogan"<?php if (!$show_site_slogan) { print ' class="header-hidden"'; } ?>>
+            <?php print $site_slogan; ?>
+          </div>
         <?php endif; ?>
+
       </div> <!-- /#name-and-slogan -->
     <?php endif; ?>
 
@@ -123,37 +126,43 @@
 
   <div id="main-wrapper"><div id="main" class="clearfix">
 
-      <?php if ($breadcrumb): ?>
-        <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+    <?php if ($breadcrumb): ?>
+      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+    <?php endif; ?>
+
+    <div id="content" class="column"><div class="section">
+      <?php if ($page['highlight']): ?><div id="highlight"><?php print render($page['highlight']); ?></div><?php endif; ?>
+      <a id="main-content"></a>
+      <?php print render($title_prefix); ?>
+      <?php if ($title): ?>
+        <h1 class="title" id="page-title">
+          <?php print $title; ?>
+        </h1>
       <?php endif; ?>
-
-      <div id="content" class="column"><div class="section">
-        <?php if ($page['highlight']): ?><div id="highlight"><?php print render($page['highlight']); ?></div><?php endif; ?>
-        <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php if ($title): ?>
-          <h1 class="title" id="page-title"><?php print $title; ?></h1>
-        <?php endif; ?>
-        <?php print render($title_suffix); ?>
-        <?php if ($tabs): ?>
-          <div class="tabs"><?php print render($tabs); ?></div>
-        <?php endif; ?>
-        <?php print render($page['help']); ?>
-        <?php if ($action_links): ?>
-          <ul class="action-links"><?php print render($action_links); ?></ul>
-        <?php endif; ?>
-        <?php print render($page['content']); ?>
-        <?php print $feed_icons; ?>
-        
-      </div></div> <!-- /.section, /#content -->
-
-      <?php if ($page['sidebar_first']): ?>
-        <div id="sidebar-first" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_first']); ?>
-        </div></div> <!-- /.section, /#sidebar-first -->
+      <?php print render($title_suffix); ?>
+      <?php if ($tabs): ?>
+        <div class="tabs">
+          <?php print render($tabs); ?>
+        </div>
       <?php endif; ?>
+      <?php print render($page['help']); ?>
+      <?php if ($action_links): ?>
+        <ul class="action-links">
+          <?php print render($action_links); ?>
+        </ul>
+      <?php endif; ?>
+      <?php print render($page['content']); ?>
+      <?php print $feed_icons; ?>
 
-    </div></div> <!-- /#main, /#main-wrapper -->
+    </div></div> <!-- /.section, /#content -->
+
+    <?php if ($page['sidebar_first']): ?>
+      <div id="sidebar-first" class="column sidebar"><div class="section">
+        <?php print render($page['sidebar_first']); ?>
+      </div></div> <!-- /.section, /#sidebar-first -->
+    <?php endif; ?>
+
+  </div></div> <!-- /#main, /#main-wrapper -->
 
   <?php if ($page['triptych_first']): ?>
     <div id="triptych-wrapper"><div id="triptych" class="clearfix">
@@ -168,54 +177,54 @@
         <div id="triptych-middle" class="region triptych"><div class="section">
           <?php print render($page['triptych_middle']); ?>
         </div></div> <!-- /.section, /#triptych-middle -->
-      <?php endif; ?>    
+      <?php endif; ?>
 
       <?php if ($page['triptych_last']): ?>
         <div id="triptych-last" class="region triptych"><div class="section">
           <?php print render($page['triptych_last']); ?>
         </div></div> <!-- /.section, /#triptych-last -->
-      <?php endif; ?>      
-      
+      <?php endif; ?>
+
     </div></div> <!-- /#triptych, /#triptych-wrapper -->
   <?php endif; ?>
 
   <div id="footer-wrapper"><div class="section">
 
-   <?php if ($page['footer_firstcolumn']): ?>  <!-- This should be a 4-part statement w/ ORs -->
-   <div id="footer-columns" class="clearfix">
-    
-      <?php if ($page['footer_firstcolumn']): ?>
-        <div id="footer-firstcolumn" class="region sitemap"><div class="section">
-          <?php print render($page['footer_firstcolumn']); ?>
-        </div></div> <!-- /.section, /#footer-firstcolumn -->
-      <?php endif; ?>           
-      
-      <?php if ($page['footer_secondcolumn']): ?>
-        <div id="footer-secondcolumn" class="region sitemap"><div class="section">
-          <?php print render($page['footer_secondcolumn']); ?>
-        </div></div> <!-- /.section, /#footer-secondcolumn -->
-      <?php endif; ?>  
-      
-      <?php if ($page['footer_thirdcolumn']): ?>
-        <div id="footer-thirdcolumn" class="region sitemap"><div class="section">
-          <?php print render($page['footer_thirdcolumn']); ?>
-        </div></div> <!-- /.section, /#footer-thirdcolumn -->
-      <?php endif; ?>  
-      
-      <?php if ($page['footer_fourthcolumn']): ?>
-        <div id="footer-fourthcolumn" class="region sitemap"><div class="section">
-          <?php print render($page['footer_fourthcolumn']); ?>
-        </div></div> <!-- /.section, /#footer-fourthcolumn -->
-      <?php endif; ?>  
+    <?php if ($page['footer_firstcolumn']): ?>  <!-- This should be a 4-part statement w/ ORs -->
+      <div id="footer-columns" class="clearfix">
 
-    </div><!-- /#footer-columns -->
-    <?php endif; ?>  
+        <?php if ($page['footer_firstcolumn']): ?>
+          <div id="footer-firstcolumn" class="region sitemap"><div class="section">
+            <?php print render($page['footer_firstcolumn']); ?>
+          </div></div> <!-- /.section, /#footer-firstcolumn -->
+        <?php endif; ?>
+
+        <?php if ($page['footer_secondcolumn']): ?>
+          <div id="footer-secondcolumn" class="region sitemap"><div class="section">
+            <?php print render($page['footer_secondcolumn']); ?>
+          </div></div> <!-- /.section, /#footer-secondcolumn -->
+        <?php endif; ?>
+
+        <?php if ($page['footer_thirdcolumn']): ?>
+          <div id="footer-thirdcolumn" class="region sitemap"><div class="section">
+            <?php print render($page['footer_thirdcolumn']); ?>
+          </div></div> <!-- /.section, /#footer-thirdcolumn -->
+        <?php endif; ?>
+
+        <?php if ($page['footer_fourthcolumn']): ?>
+          <div id="footer-fourthcolumn" class="region sitemap"><div class="section">
+            <?php print render($page['footer_fourthcolumn']); ?>
+          </div></div> <!-- /.section, /#footer-fourthcolumn -->
+        <?php endif; ?>
+
+      </div><!-- /#footer-columns -->
+    <?php endif; ?>
 
     <div id="footer" class="clearfix">
       <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
       <?php print render($page['footer']); ?>
     </div><!-- /#footer -->
 
-</div></div> <!-- /.section, /#footer-wrapper -->
+  </div></div> <!-- /.section, /#footer-wrapper -->
 
 </div></div> <!-- /#page, /#page-wrapper -->

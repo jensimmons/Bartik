@@ -1,10 +1,8 @@
 /* $Id$ */
 
 /**
-/* Basic Layout Styles
-*/
-
-
+ * Basic layout styles
+ */
 #header div.section,
 #navigation div.section, 
 #featured div.section, 
@@ -71,25 +69,3 @@
   margin-right: auto;
   width: 960px;
 }
-
-
-/*
-#content,
-#sidebar {
-  float: left;
-  display: inline;
-  position: relative;
-}
-
-#main {
-  width: 100%;
-}
-#content {
-  width: 70%;
-  float: left;
-}
-#sidebar {
-  width: 25%;
-  float: left;
-}
-*/

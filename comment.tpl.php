@@ -1,8 +1,6 @@
 <?php
 // $Id$
 
-// Last conformed to D7 Head - v 1.18 2010/01/07 05:23:51 webchick
-
 /**
  * @file
  * Default theme implementation for comments.
@@ -97,8 +95,8 @@
         <?php print $signature ?>
       </div>
       <?php endif; ?>
-    </div>
+    </div> <!-- /.content -->
 
     <?php print render($content['links']) ?>
-  </div>
+  </div> <!-- /.comment-text -->
 </div>

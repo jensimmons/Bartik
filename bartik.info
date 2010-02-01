@@ -1,7 +1,7 @@
 ;$Id$
 
 name = Bartik
-description = A flexible theme with many regions. Suitable for hacking to make your own theme.
+description = A flexible, recolorable theme with many regions.
 version = VERSION
 core = 7.x
 engine = phptemplate
@@ -30,3 +30,4 @@ regions[footer_secondcolumn] = Footer second column
 regions[footer_thirdcolumn] = Footer third column
 regions[footer_fourthcolumn] = Footer fourth column
 regions[footer] = Footer
+

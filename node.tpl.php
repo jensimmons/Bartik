@@ -1,8 +1,6 @@
 <?php
 // $Id$
 
-// Last conformed to to D7 Head - v 1.31 2010/01/04 03:57:19 webchick
-
 /**
  * @file
  * Default theme implementation to display a node.
@@ -82,26 +80,29 @@
 
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $node_title; ?></a></h2>
+    <h2<?php print $title_attributes; ?>>
+      <a href="<?php print $node_url; ?>"><?php print $node_title; ?></a>
+    </h2>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
   <?php if ($display_submitted || !empty($content['links']['terms'])): ?>
     <div class="meta">
+
       <?php if ($display_submitted): ?>
         <span class="submitted">
           <?php print $user_picture; ?>
-          <?php
-            print t('published by !username on !datetime',
-              array('!username' => $name, '!datetime' => $date));
-          ?>
+          <?php print $published; ?>
         </span>
       <?php endif; ?>
 
       <?php if (!empty($content['links']['terms'])): ?>
-        <div class="terms terms-inline"><?php print render($content['links']['terms']); ?></div>
+        <div class="terms terms-inline">
+          <?php print render($content['links']['terms']); ?>
+        </div>
       <?php endif; ?>
-    </div>
+
+    </div> <!-- /.meta -->
   <?php endif; ?>
 
   <div class="content clearfix"<?php print $content_attributes; ?>>
@@ -120,7 +121,7 @@
     // Only display the wrapper div if there are links.
     if ($links):
   ?>
-    <div id="link-wrapper">
+    <div class="link-wrapper">
       <?php print $links; ?>
     </div>
   <?php endif; ?>

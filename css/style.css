@@ -30,8 +30,8 @@ del {
   text-decoration: line-through;
 }
 .block ul {
-margin: 0;
-padding: 0 0 0.25em;
+  margin: 0;
+  padding: 0 0 0.25em;
 }
 ul.contextual-links {
   font-size: 90%;
@@ -47,7 +47,7 @@ ul.contextual-links {
 }
 #header {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #ffffff;
+  color: #fff;
 }
 #header a  {
   color: #fff;
@@ -80,12 +80,16 @@ ul.contextual-links {
   font-family: Georgia, "Times New Roman", Times, serif;
   margin-top: 7px;
   font-size: 100%;
-  word-spacing: 0.1em;  
+  word-spacing: 0.1em;
   font-style: italic;
 }
+#header .header-hidden {
+  text-indent: -9999em;
+}
+/* Menus when in the header region. */
 #header div.block-menu, 
 #header div#block-system-main-menu,
-#header div#block-system-secondary-menu { /* menus when in the header region */
+#header div#block-system-secondary-menu {
   height: 1.1em;
   margin: 10px 0;
   font-size: 120%;
@@ -138,11 +142,11 @@ ul.contextual-links {
   top: 0;
   right: 2%;
   background: #464748;
-  color: #fff;  
+  color: #fff;
   float: right;
   font-size: 13px;
   padding: 4px 10px 5px;
-  font-family: Helvetica, Arial, san-serif;
+  font-family: Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 80%;
 }
@@ -221,8 +225,8 @@ ul.contextual-links {
   padding: 0.6em 0.6em 4px;
 }
 #navigation ul.links li a {
-  color: #333333;
-  text-shadow: 0 1px #EEEEEE;
+  color: #333;
+  text-shadow: 0 1px #eee;
   background: #ccc;
   background: rgba(255, 255, 255, 0.78);
   border-top-left-radius: 8px;
@@ -231,9 +235,9 @@ ul.contextual-links {
   -khtml-border-radius-topleft: 8px;
   border-top-right-radius: 8px;
   -webkit-border-top-right-radius: 8px;
-  -moz-border-radius-topright: 8px; 
-  -khtml-border-radius-topright: 8px; 
-  border-bottom: 1px solid #FFFFFF;
+  -moz-border-radius-topright: 8px;
+  -khtml-border-radius-topright: 8px;
+  border-bottom: 1px solid #fff;
 }
 #navigation ul.links li a:hover {
   background: #fff;
@@ -269,7 +273,6 @@ ul.contextual-links {
   margin-bottom: 40px;
   font-size: 120%:
 }
-
 .field-type-image {
   float: left;
   padding: 2px 20px 5px 0;
@@ -317,7 +320,7 @@ h1#page-title {
   color: #181818;
 }
 #block-system-main .node-teaser {
-  border-bottom: 1px solid #D3D7D9;  
+  border-bottom: 1px solid #d3d7d9;
   margin-bottom: 30px;
   padding-bottom: 15px;
 }
@@ -331,7 +334,7 @@ h1#page-title {
   margin-left: 20px;
 }
 #block-system-main .meta {
-  font-family: Arial, san-serif;
+  font-family: Arial, sans-serif;
   font-size: 80%;
   color: #a8a8a8;
   margin-bottom: -5px;
@@ -341,7 +344,7 @@ h1#page-title {
 }
 #block-system-main img {
   margin: 0 0 15px;
-  border: 1px solid #D3D7D9;
+  border: 1px solid #d3d7d9;
 }
 #block-system-main .node-teaser img {
   margin: 0;
@@ -349,7 +352,7 @@ h1#page-title {
 #block-system-main div.field-name-taxonomy-tags div.field-label,
 #block-system-main div.field-name-taxonomy-tags div.field-items,
 #block-system-main div.field-name-taxonomy-tags div.field-item {
-  font-family: Arial, san-serif;
+  font-family: Arial, sans-serif;
   display: inline;
   float: left;
   padding-right: 10px;
@@ -366,11 +369,11 @@ h1#page-title {
 #block-system-main div.field-name-taxonomy-tags a:hover {
   text-decoration: underline;
 }
-#block-system-main #link-wrapper {
+#block-system-main .link-wrapper {
   margin-left: 236px;
 }
 #block-system-main ul.links {
-  font-family: Arial, san-serif;
+  font-family: Arial, sans-serif;
   color: #68696b;
   font-size: 80%;  
 }
@@ -379,7 +382,7 @@ h1#page-title {
 /* ----------------- Comments ----------------- */
 
 #comment-wrapper {
-  border-top: 1px solid #D3D7D9;
+  border-top: 1px solid #d3d7d9;
   padding-top: 15px;
 }
 #comment-wrapper h2.comments {
@@ -400,11 +403,11 @@ h1#page-title {
 }
 #comments .attribution img {
   margin: 0;
-  border: 1px solid #D3D7D9;
+  border: 1px solid #d3d7d9;
 }
 #comments .submitted p {
   margin: 4px 0;
-  font-family: Arial, san-serif;
+  font-family: Arial, sans-serif;
   font-size: 110%;
   line-height: 1.2em;
 }
@@ -421,12 +424,12 @@ h1#page-title {
   width: 20px;
   margin-left: -45px;
   margin-top: 10px;
-  position:a bsolute;
+  position: absolute;
 }
 #comments .comment-text {
   margin-left: 140px;
   padding: 10px 25px;
-  border: 1px solid #D3D7D9;
+  border: 1px solid #d3d7d9;
 }
 #comments .indented {
   margin-left: 40px;
@@ -451,7 +454,7 @@ h1#page-title {
   margin: 0 0 0.5em;
   border-bottom: 1px solid #d6d6d6; 
   padding-bottom: 5px;
-  text-shadow: 0 1px 0 #FFFFFF;
+  text-shadow: 0 1px 0 #fff;
 }
 .sidebar tbody {
   border: none;
@@ -469,7 +472,7 @@ h1#page-title {
   border-top: 1px solid #d3d7d9;
 }
 #triptych h2 {
-  color: #000000;
+  color: #000;
   font-size: 200%;
   margin-bottom: 1em;
   text-align: center;
@@ -491,10 +494,9 @@ h1#page-title {
 #footer-wrapper a:hover {
   color: #b7b8b8;
 }
-
 #footer-wrapper div.block {
   margin: 20px 0;
-  border: 1px solid #38393B;
+  border: 1px solid #38393b;
   padding: 10px;
 }
 #footer-wrapper #block-system-main-menu,
@@ -506,7 +508,7 @@ h1#page-title {
   border: none;
 }
 #footer-wrapper h2 {
-  border-bottom: 1px solid #38393B;
+  border-bottom: 1px solid #38393b;
   color: #7c7e84;
   font-size: 104%;
   margin-bottom: 0;
@@ -525,7 +527,7 @@ h1#page-title {
 }
 #footer-wrapper li a {
   display: block;
-  border-bottom: 1px solid #38393B;
+  border-bottom: 1px solid #38393b;
   line-height: 1.2em;
   padding: 0.8em 2px 0.8em 20px;
   text-indent: -15px;
@@ -587,8 +589,8 @@ div.messages {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 div.status {
-  background: #FCF6BE;
-  border: 1px solid #BBBBBB;
+  background: #fcf6be;
+  border: 1px solid #bbb;
   margin: 0 auto;
   padding: 15px;
   width: 900px;
@@ -636,12 +638,13 @@ input {
   padding: 4px;
 }
 input.form-submit {
-  border-color: #ccc;
-  border-style: solid;
-  border-width: 1px;
-  margin: 2px 0;
-  padding: 3px;
-  background: #fff;
+  border: 1px solid #ababab;
+  margin: 10px 0;
+  padding: 5px;
+  background: #ebebeb;
+}
+input.form-submit:hover {
+  background: #dedede;
 }
 #user-profile-form input#edit-submit {
   margin-left: 500px;
