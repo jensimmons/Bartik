@@ -106,7 +106,7 @@ ul.contextual-links {
 #header #block-system-secondary-menu h2 {
   display: none;
 }
-#header .block ul,
+#header .block ul,   /* any menu block in the header region */
 #header .block li {
   list-style: none;
   margin: 0;
@@ -131,12 +131,12 @@ ul.contextual-links {
   padding-right: 0;
   border-right: none;
 }
-#header #block-search-form { /* search block when in the header region */
+#header #block-search-form { /* search block in the header region */
   float: right;
   width: 24%;
   margin: 8px 0;
 }
-#header #block-user-login { /* login block when in the Header Region */
+#header #block-user-login { /* login block in the Header Region */
   display: block;
   position: absolute;
   top: 0;
@@ -212,6 +212,7 @@ ul.contextual-links {
 }
 #navigation {
   padding: 5x 15px;
+  clear: both;
 }
 #navigation a {
   color: #d9d9d9;
@@ -468,7 +469,7 @@ h1#page-title {
 /* ----------------- Triptych ----------------- */
 
 #triptych-wrapper {
-  background: #fafafa url(images/triptych-background.jpg) repeat-x top center;
+  background: #fafafa url(../images/triptych-background.jpg) repeat-x top center;
   border-top: 1px solid #d3d7d9;
 }
 #triptych h2 {
@@ -507,7 +508,7 @@ h1#page-title {
   padding: 0;
   border: none;
 }
-#footer-wrapper h2 {
+#footer-columns h2 {
   border-bottom: 1px solid #38393b;
   color: #7c7e84;
   font-size: 104%;
@@ -515,43 +516,70 @@ h1#page-title {
   padding-bottom: 3px;
   text-transform: uppercase;
 }
-#footer-wrapper ul {
+#footer-columns ul {
   list-style: none;
   padding-left: 0;
   margin-left: 0
 }
-#footer-wrapper li {
+#footer-columns li {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#footer-wrapper li a {
+#footer-columns li a {
   display: block;
   border-bottom: 1px solid #38393b;
   line-height: 1.2em;
   padding: 0.8em 2px 0.8em 20px;
   text-indent: -15px;
 }
-#footer-wrapper li a:hover {
+#footer-columns li a:hover {
   background: #1f1f21;
 }
 #footer {
-  text-align: center;
   font-size: 92%;
   letter-spacing: 0.2px;
   color: #5a5b5d;
   margin-top: 30px;
   border-top: 1px solid #333436;
 }
+#footer p {
+  text-align: center;
+}
 #footer .region {
   margin-top: 20px;
 }
-#footer a {
-  color: #5a5b5d;
-  border-bottom: 1px dotted #5a5b5d;
+#footer a:link,
+#footer a:visited {
+  color: #787878;
 }
 #footer a:hover {
-  border-bottom: 1px dotted #5a5b5d;
+  color: #b0b0b0;
+}
+#footer a:active {
+  color: #fff;
+}
+#footer .block {
+  clear: both;
+}
+#footer ul,   /* any menu block in the header region */
+#footer li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#footer li a {
+  float: left;
+  padding: 0 12px;
+  display: block;
+  border-right: 1px solid #555;
+}
+#footer li.first a {
+  padding-left: 0;
+}
+#footer li.last a {
+  padding-right: 0;
+  border-right: none;
 }
 
 
@@ -611,6 +639,30 @@ div.error {
   float: none;
 }
 
+/* ---------------- Buttons    ---------------- */
+
+input.form-submit, a.button {
+  cursor: pointer;
+  padding: 4px 17px;
+  margin-bottom: 1em;
+  color: #5a5a5a;
+  text-align: center;
+  font-weight: normal;
+  font-family: "Lucida Grande", Verdana, sans-serif;
+  border: 1px solid #e4e4e4;
+  border-bottom: 1px solid #b4b4b4;
+  border-left-color: #D2D2D2;
+  border-right-color: #D2D2D2;
+  background: url(../images/buttons.png) 0 0 repeat-x;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  font-size: 90%;
+}
+a.button:link, a.button:visited, a.button:hover, a.button:active {
+  text-decoration: none;
+  color: #5a5a5a;
+}
 
 /* -------------- Form Elements   ------------- */
 
@@ -636,12 +688,6 @@ input {
   border-width: 1px;
   margin: 2px 0;
   padding: 4px;
-}
-input.form-submit {
-  border: 1px solid #ababab;
-  margin: 10px 0;
-  padding: 5px;
-  background: #ebebeb;
 }
 input.form-submit:hover {
   background: #dedede;
