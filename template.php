@@ -48,6 +48,12 @@ function bartik_process_page(&$variables) {
 
   $variables['show_site_name']   = !is_null(theme_get_setting('toggle_name')) ? theme_get_setting('toggle_name') : TRUE;
   $variables['show_site_slogan'] = !is_null(theme_get_setting('toggle_slogan')) ? theme_get_setting('toggle_slogan') : TRUE;
+
+  // Load sample content if requested.
+  if (theme_get_setting('bartik_sample_regions') && user_access('administer themes')) {
+    include_once './' . drupal_get_path('theme', 'bartik') . '/theme-settings.php';
+    _bartik_process_page($variables);
+  }
 }
 
 /**

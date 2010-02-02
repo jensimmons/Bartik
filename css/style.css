@@ -721,3 +721,8 @@ div.password-suggestions {
   background: #222222;
   opacity: 0.7;
 }
+
+div.sample-regions-link {
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
