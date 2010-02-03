@@ -190,7 +190,7 @@
 
   <div id="footer-wrapper"><div class="section">
 
-    <?php if ($page['footer_firstcolumn']): ?>  <!-- This should be a 4-part statement w/ ORs -->
+    <?php if ($page['footer_firstcolumn'] || $page['footer_secondcolumn'] || $page['footer_thirdcolumn'] || $page['footer_fourthcolumn']): ?>
       <div id="footer-columns" class="clearfix">
 
         <?php if ($page['footer_firstcolumn']): ?>
