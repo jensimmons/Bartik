@@ -7,13 +7,13 @@ body,
 #block-system-main {
   color: #3b3b3b;
 }
-a {
-  color: #0073b6;
-}
 #header {
   background-color: #000000;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000000), to(#3d3d3d));
   background-image: -moz-linear-gradient(-90deg, #000000, #3d3d3d);
+}
+a {
+  color: #0073b6;
 }
 a:hover {
   color: #018fe2;
