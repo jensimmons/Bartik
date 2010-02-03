@@ -57,7 +57,8 @@ ul.contextual-links {
 #header a  {
   color: #fff;
 }
-#header a:hover  {
+#header a:hover,
+#header a:focus {
   color: #b5b7b9;
 }
 #header a:active  {
@@ -242,7 +243,8 @@ ul.contextual-links {
   -khtml-border-radius-topright: 8px;
   border-bottom: 1px solid #fff;
 }
-#navigation ul.links li a:hover {
+#navigation ul.links li a:hover,
+#navigation ul.links li a:focus {
   background: #fff;
   background: rgba(255, 255, 255, 0.95);
 }
@@ -369,7 +371,8 @@ h1#page-title {
 #block-system-main div.field-name-taxonomy-tags div.field-item {
   font-size: 95%;
 }
-#block-system-main div.field-name-taxonomy-tags a:hover {
+#block-system-main div.field-name-taxonomy-tags a:hover,
+#block-system-main div.field-name-taxonomy-tags a:focus {
   text-decoration: underline;
 }
 #block-system-main .link-wrapper {
@@ -494,7 +497,8 @@ h1#page-title {
 #footer-wrapper a {
   color: #7c7e84;
 }
-#footer-wrapper a:hover {
+#footer-wrapper a:hover,
+#footer-wrapper a:focus {
   color: #b7b8b8;
 }
 #footer-wrapper div.block {
@@ -535,7 +539,8 @@ h1#page-title {
   padding: 0.8em 2px 0.8em 20px;
   text-indent: -15px;
 }
-#footer-columns li a:hover {
+#footer-columns li a:hover,
+#footer-columns li a:focus {
   background: #1f1f21;
 }
 #footer {
@@ -555,7 +560,8 @@ h1#page-title {
 #footer a:visited {
   color: #787878;
 }
-#footer a:hover {
+#footer a:hover,
+#footer a:focus {
   color: #b0b0b0;
 }
 #footer a:active {
@@ -665,6 +671,7 @@ a.button {
 a.button:link,
 a.button:visited,
 a.button:hover,
+a.button:focus,
 a.button:active {
   text-decoration: none;
   color: #5a5a5a;
@@ -695,7 +702,8 @@ input {
   margin: 2px 0;
   padding: 4px;
 }
-input.form-submit:hover {
+input.form-submit:hover,
+input.form-submit:focus {
   background: #dedede;
 }
 #user-profile-form input#edit-submit {
