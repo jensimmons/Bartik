@@ -77,7 +77,7 @@
     <?php endif; ?>
 
     <?php if ($site_name || $site_slogan): ?>
-      <div id="name-and-slogan">
+      <div id="name-and-slogan"<?php if ($hide_site_name && $hide_site_slogan) { print ' class="element-invisible"'; } ?>>
 
         <?php if ($site_name): ?>
           <?php if ($title): ?>
