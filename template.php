@@ -2,8 +2,8 @@
 // $Id$
 
 /**
-* Add body classes if certain regions have content.
-*/
+ * Add body classes if certain regions have content.
+ */
 function bartik_preprocess_html(&$variables) {
   if (!empty($variables['page']['featured'])) {
     $variables['classes_array'][] = 'featured';
