@@ -54,14 +54,14 @@ ul.contextual-links {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
 }
-#header a  {
+#header a {
   color: #fff;
 }
 #header a:hover,
 #header a:focus {
   color: #b5b7b9;
 }
-#header a:active  {
+#header a:active {
   color: #adb0bf;
 }
 #header #logo {
@@ -79,7 +79,7 @@ ul.contextual-links {
 #header h1#site-name {
   margin: 0;
 }
-#header #site-name a  {
+#header #site-name a {
   font-weight: normal;
 }
 #header #site-slogan {
@@ -109,7 +109,7 @@ ul.contextual-links {
 #header #block-system-secondary-menu h2 {
   display: none;
 }
-#header .block ul,   /* any menu block in the header region */
+#header .block ul, /* any menu block in the header region */
 #header .block li {
   list-style: none;
   margin: 0;
@@ -397,7 +397,7 @@ h1#page-title {
 .node-teaser #comment-wrapper {
   display: none;
 }
-#comment-wrapper  div.user-picture img {
+#comment-wrapper div.user-picture img {
   margin-left: 0;
 }
 #comments .comment {
@@ -570,7 +570,7 @@ h1#page-title {
 #footer .block {
   clear: both;
 }
-#footer ul,   /* any menu block in the header region */
+#footer ul, /* any menu block in the header region */
 #footer li {
   list-style: none;
   margin: 0;
