@@ -77,11 +77,11 @@
     <div class="comment-arrow"></div>
 
     <?php if ($new): ?>
-      <span class="new"><?php print $new ?></span>
+      <span class="new"><?php print $new; ?></span>
     <?php endif; ?>
 
     <?php print render($title_prefix); ?>
-    <h3<?php print $title_attributes; ?>><?php print $title ?></h3>
+    <h3<?php print $title_attributes; ?>><?php print $title; ?></h3>
     <?php print render($title_suffix); ?>
 
     <div class="content"<?php print $content_attributes; ?>>
@@ -92,11 +92,11 @@
       ?>
       <?php if ($signature): ?>
       <div class="user-signature clearfix">
-        <?php print $signature ?>
+        <?php print $signature; ?>
       </div>
       <?php endif; ?>
     </div> <!-- /.content -->
 
-    <?php print render($content['links']) ?>
+    <?php print render($content['links']); ?>
   </div> <!-- /.comment-text -->
 </div>
