@@ -61,6 +61,23 @@ function bartik_process_page(&$variables) {
 }
 
 /**
+ * Override or insert variables into the maintenance page template.
+ */
+function bartik_process_maintenance_page(&$variables) {
+  // Always print the site name, but don't always show it visually.
+  $variables['hide_site_name']   = theme_get_setting('toggle_name') ? FALSE : TRUE;
+  $variables['hide_site_slogan'] = theme_get_setting('toggle_slogan') ? FALSE : TRUE;
+  if ($variables['hide_site_name']) {
+    // If toggle_name is FALSE, the site_name will be empty, so we rebuild it.
+    $variables['site_name'] = filter_xss_admin(variable_get('site_name', 'Drupal'));
+  }
+  if ($variables['hide_site_slogan']) {
+    // If toggle_site_slogan is FALSE, the site_slogan will be empty, so we rebuild it.
+    $variables['site_slogan'] = filter_xss_admin(variable_get('site_slogan', ''));
+  }
+}
+
+/**
  * Override or insert variables into the node template.
  */
 function bartik_process_node(&$variables) {
