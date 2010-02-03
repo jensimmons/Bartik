@@ -220,10 +220,12 @@
       </div><!-- /#footer-columns -->
     <?php endif; ?>
 
-    <div id="footer" class="clearfix">
-      <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
-      <?php print render($page['footer']); ?>
+    <?php if ($page['footer'] || $secondary_menu): ?>
+      <div id="footer" class="clearfix">
+        <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
+        <?php print render($page['footer']); ?>
     </div><!-- /#footer -->
+    <?php endif; ?>
 
   </div></div> <!-- /.section, /#footer-wrapper -->
 
