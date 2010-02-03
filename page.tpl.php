@@ -81,20 +81,20 @@
 
         <?php if ($site_name): ?>
           <?php if ($title): ?>
-            <div id="site-name"<?php if (!$show_site_name) { print ' class="header-hidden"'; } ?>>
+            <div id="site-name"<?php if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
               <strong>
                 <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
               </strong>
             </div>
           <?php else: /* Use h1 when the content title is empty */ ?>
-            <h1 id="site-name"<?php if (!$show_site_name) { print ' class="header-hidden"'; } ?>>
+            <h1 id="site-name"<?php if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
             </h1>
           <?php endif; ?>
         <?php endif; ?>
 
         <?php if ($site_slogan): ?>
-          <div id="site-slogan"<?php if (!$show_site_slogan) { print ' class="header-hidden"'; } ?>>
+          <div id="site-slogan"<?php if ($hide_site_slogan) { print ' class="element-invisible"'; } ?>>
             <?php print $site_slogan; ?>
           </div>
         <?php endif; ?>

@@ -88,9 +88,6 @@ ul.contextual-links {
   word-spacing: 0.1em;
   font-style: italic;
 }
-#header .header-hidden {
-  text-indent: -9999em;
-}
 /* Menus when in the header region. */
 #header div.block-menu,
 #header div#block-system-main-menu,

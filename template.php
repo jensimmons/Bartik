@@ -41,13 +41,17 @@ function bartik_process_page(&$variables) {
   if (module_exists('color')) {
     _color_page_alter($variables);
   }
-  // Always print the site name, but don't always actually show it - the class
-  // "header-hidden" is added when it's supposed to be hidden.
-  $variables['site_name']   = filter_xss_admin(variable_get('site_name', 'Drupal'));
-  $variables['site_slogan'] = filter_xss_admin(variable_get('site_slogan', ''));
-
-  $variables['show_site_name']   = !is_null(theme_get_setting('toggle_name')) ? theme_get_setting('toggle_name') : TRUE;
-  $variables['show_site_slogan'] = !is_null(theme_get_setting('toggle_slogan')) ? theme_get_setting('toggle_slogan') : TRUE;
+  // Always print the site name, but don't always show it visually.
+  $variables['hide_site_name']   = theme_get_setting('toggle_name') ? FALSE : TRUE;
+  $variables['hide_site_slogan'] = theme_get_setting('toggle_slogan') ? FALSE : TRUE;
+  if ($variables['hide_site_name']) {
+    // If toggle_name is FALSE, the site_name will be empty, so we rebuild it.
+    $variables['site_name'] = filter_xss_admin(variable_get('site_name', 'Drupal'));
+  }
+  if ($variables['hide_site_slogan']) {
+    // If toggle_site_slogan is FALSE, the site_slogan will be empty, so we rebuild it.
+    $variables['site_slogan'] = filter_xss_admin(variable_get('site_slogan', ''));
+  }
 
   // Load sample content if requested.
   if (theme_get_setting('bartik_sample_regions') && user_access('administer themes')) {
