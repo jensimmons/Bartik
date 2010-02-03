@@ -99,16 +99,6 @@ ul.contextual-links {
   float: left;
   width: 75%;
 }
-#header .block-menu h2,
-#header #block-system-main-menu h2,
-#header #block-system-secondary-menu h2 {
-  display: none;
-}
-#header .block-menu h2,
-#header #block-system-main-menu h2,
-#header #block-system-secondary-menu h2 {
-  display: none;
-}
 #header .block ul, /* any menu block in the header region */
 #header .block li {
   list-style: none;
@@ -156,9 +146,6 @@ ul.contextual-links {
 #header #block-user-login a {
   color: #fff;
   font-size: 90%;
-}
-#header #block-user-login h2 {
-  display: none;
 }
 #header #block-user-login .form-item label {
   display: inline;
@@ -209,10 +196,6 @@ ul.contextual-links {
 
 /* --------------- Main Navigation ------------ */
 
-#navigation h2 {
-  margin-top: 0;
-  display: none;
-}
 #navigation {
   padding: 5x 15px;
   clear: both;
@@ -513,6 +496,9 @@ h1#page-title {
   margin: 0;
   padding: 0;
   border: none;
+}
+#footer-wrapper ul#secondary-menu {
+  margin-top: 1em;
 }
 #footer-columns h2 {
   border-bottom: 1px solid #38393b;

@@ -87,3 +87,14 @@ function bartik_process_node(&$variables) {
 
   $variables['published'] = filter_xss_admin(token_replace($published, array('node' => $variables['node'])));
 }
+
+/**
+ * Override or insert variables into the block template.
+ */
+function bartik_preprocess_block(&$variables) {
+  // In the header region, visually hide the title of any menu block or of the
+  // user login block, but leave it accessible.
+  if ($variables['block']->region == 'header' && ($variables['block']->module == 'menu' || $variables['block']->module == 'user' && $variables['block']->delta == 'login')) {
+    $variables['title_attributes_array']['class'][] = 'element-invisible';
+  }
+}
