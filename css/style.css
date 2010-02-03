@@ -12,7 +12,12 @@ a:link,
 a:visited {
   text-decoration: none;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 1.0em 0 0.5em;
   font-weight: inherit;
 }
@@ -641,7 +646,8 @@ div.error {
 
 /* ---------------- Buttons    ---------------- */
 
-input.form-submit, a.button {
+input.form-submit,
+a.button {
   cursor: pointer;
   padding: 4px 17px;
   margin-bottom: 1em;
@@ -659,7 +665,10 @@ input.form-submit, a.button {
   -khtml-border-radius: 15px;
   font-size: 90%;
 }
-a.button:link, a.button:visited, a.button:hover, a.button:active {
+a.button:link,
+a.button:visited,
+a.button:hover,
+a.button:active {
   text-decoration: none;
   color: #5a5a5a;
 }

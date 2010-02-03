@@ -3,7 +3,8 @@
 /**
  * Styles and colors that the color module will modify.
  */
-body, #block-system-main {
+body,
+#block-system-main {
   color: #3b3b3b;
 }
 a {
