@@ -87,7 +87,7 @@ ul.contextual-links {
   text-indent: -9999em;
 }
 /* Menus when in the header region. */
-#header div.block-menu, 
+#header div.block-menu,
 #header div#block-system-main-menu,
 #header div#block-system-secondary-menu {
   height: 1.1em;
@@ -207,7 +207,7 @@ ul.contextual-links {
 /* --------------- Main Navigation ------------ */
 
 #navigation h2 {
-  margin-top: 0;  
+  margin-top: 0;
   display: none;
 }
 #navigation {
@@ -376,7 +376,7 @@ h1#page-title {
 #block-system-main ul.links {
   font-family: Arial, sans-serif;
   color: #68696b;
-  font-size: 80%;  
+  font-size: 80%;
 }
 
 
@@ -442,8 +442,8 @@ h1#page-title {
 .sidebar .block {
   padding: 15px 20px;
   margin: 20px 0;
-  border: 1px solid #dcdcdc; 
-  -webkit-border: 1px solid #e0e0e0; 
+  border: 1px solid #dcdcdc;
+  -webkit-border: 1px solid #e0e0e0;
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -453,17 +453,17 @@ h1#page-title {
 }
 .sidebar h2 {
   margin: 0 0 0.5em;
-  border-bottom: 1px solid #d6d6d6; 
+  border-bottom: 1px solid #d6d6d6;
   padding-bottom: 5px;
   text-shadow: 0 1px 0 #fff;
 }
 .sidebar tbody {
   border: none;
 }
-.sidebar tr.even, 
+.sidebar tr.even,
 .sidebar tr.odd {
   background: none;
-  border-bottom: 1px solid #d6d6d6; 
+  border-bottom: 1px solid #d6d6d6;
 }
 
 /* ----------------- Triptych ----------------- */
