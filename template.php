@@ -24,16 +24,6 @@ function bartik_preprocess_html(&$variables) {
 }
 
 /**
- * Override or insert variables into the page template for HTML output.
- */
-function bartik_process_html(&$variables) {
-  // Hook into color.module.
-  if (module_exists('color')) {
-    _color_html_alter($variables);
-  }
-}
-
-/**
  * Override or insert variables into the page template.
  */
 function bartik_process_page(&$variables) {
