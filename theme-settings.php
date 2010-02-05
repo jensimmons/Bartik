@@ -10,22 +10,6 @@
  *   A keyed array containing the current state of the form.
  */
 function bartik_form_system_theme_settings_alter(&$form, &$form_state) {
-  // Get the node types.
-  $node_types = node_type_get_names();
-
-  $form['authoring_information'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Authoring information'),
-  );
-
-  foreach ($node_types as $type => $name) {
-    $form['authoring_information']['authoring_' . $type] = array(
-      '#type' => 'textfield',
-      '#title' => t('Authoring information for @type', array('@type' => $name)),
-      '#default_value' => theme_get_setting('authoring_' . $type) ? theme_get_setting('authoring_' . $type) : t('Published by [node:author] on [node:created]'),
-    );
-  }
-
   $form['bartik_sample_regions'] = array(
     '#type'          => 'checkbox',
     '#title'         => t('Display sample content in empty regions'),

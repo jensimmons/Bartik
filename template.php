@@ -78,17 +78,6 @@ function bartik_process_maintenance_page(&$variables) {
 }
 
 /**
- * Override or insert variables into the node template.
- */
-function bartik_process_node(&$variables) {
-  $published = theme_get_setting('authoring_' . $variables['node']->type)
-    ? theme_get_setting('authoring_' . $variables['node']->type)
-    : t('Published by [node:author] on [node:created]');
-
-  $variables['published'] = filter_xss_admin(token_replace($published, array('node' => $variables['node'])));
-}
-
-/**
  * Override or insert variables into the block template.
  */
 function bartik_preprocess_block(&$variables) {
