@@ -1,17 +1,16 @@
 <?php
 // $Id$
 
-// Last conformed to D7 Head - v 1.8 2009/08/03 03:04:33 webchick
-
 /**
  * @file
- * Theme implementation to display a single Drupal page while offline.
+ * Bartik's theme implementation to display a single Drupal page while offline.
  *
  * All the available variables are mirrored in page.tpl.php. Some may be left
  * blank but they are provided for consistency.
  *
  * @see template_preprocess()
  * @see template_preprocess_maintenance_page()
+ * @see bartik_process_maintenance_page()
  */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"

@@ -3,7 +3,7 @@
 
 /**
  * @file
- * Default theme implementation to display a single Drupal page.
+ * Bartik's theme implementation to display a single Drupal page.
  *
  * Available variables:
  *
@@ -25,6 +25,12 @@
  *   in theme settings.
  * - $site_slogan: The slogan of the site, empty when display has been disabled
  *   in theme settings.
+ * - $hide_site_name: TRUE if the site name has been toggled off on the theme
+ *   settings page. If hidden, the "element-invisible" class is added to make
+ *   the site name visually hidden, but still accessible.
+ * - $hide_site_slogan: TRUE if the site slogan has been toggled off on the
+ *   theme settings page. If hidden, the "element-invisible" class is added to
+ *   make the site slogan visually hidden, but still accessible.
  *
  * Navigation:
  * - $main_menu (array): An array containing the Main menu links for the
@@ -54,16 +60,25 @@
  *   comment/reply/12345).
  *
  * Regions:
- * - $page['help']: Dynamic help text, mostly for admin pages.
+ * - $page['header']: Items for the header region.
+ * - $page['featured']: Items for the featured region.
  * - $page['highlight']: Items for the highlighted content region.
+ * - $page['help']: Dynamic help text, mostly for admin pages.
  * - $page['content']: The main content of the current page.
  * - $page['sidebar_first']: Items for the first sidebar.
- * - $page['header']: Items for the header region.
+ * - $page['triptych_first']: Items for the first triptych.
+ * - $page['triptych_middle']: Items for the middle triptych.
+ * - $page['triptych_last']: Items for the last triptych.
+ * - $page['footer_firstcolumn']: Items for the first footer column.
+ * - $page['footer_secondcolumn']: Items for the second footer column.
+ * - $page['footer_thirdcolumn']: Items for the third footer column.
+ * - $page['footer_fourthcolumn']: Items for the fourth footer column.
  * - $page['footer']: Items for the footer region.
  *
  * @see template_preprocess()
  * @see template_preprocess_page()
  * @see template_process()
+ * @see bartik_process_page()
  */
 ?>
 <div id="page-wrapper"><div id="page">
