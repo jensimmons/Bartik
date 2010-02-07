@@ -327,8 +327,13 @@ h1#page-title {
   color: #a8a8a8;
   margin-bottom: -5px;
 }
-#block-system-main .submitted img {
-  float: right;
+#block-system-main .submitted .user-picture img {
+  float:left;
+  height:20px;
+  margin-top:1px;
+  margin-right:5px;
+  margin-bottom:0;
+  margin-left:0;
 }
 #block-system-main img {
   margin: 0 0 15px;
