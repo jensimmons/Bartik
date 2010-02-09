@@ -32,3 +32,4 @@ regions[footer_fourthcolumn] = Footer fourth column
 regions[footer] = Footer
 
 settings[bartik_sample_regions] = 1
+settings[shortcut_module_link] = 1
