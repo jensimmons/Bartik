@@ -448,7 +448,14 @@ h1#page-title {
   -moz-border-radius: 4px;
   -khtml-border-radius: 4px;
   background: #f0f0f0;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(247, 247, 247, 1)), to(rgba(240, 240, 240, 1)));
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(#f7f7f7), to(#f0f0f0));
+  background-image: -moz-linear-gradient(0% 0%, #f7f7f7 0%, #f0f0f0 95%);
+}
+* html .sidebar .block,
+*:first-child+html .sidebar .block {
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f7f7f7,endColorstr=#f0f0f0);
+  zoom: 1;
 }
 .sidebar h2 {
   margin: 0 0 0.5em;
