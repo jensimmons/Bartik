@@ -69,3 +69,24 @@
   margin-right: auto;
   width: 960px;
 }
+
+/**
+* Overlay layout styles
+*/
+.overlay #main,
+.overlay #content {
+  width: auto;
+  float: none;
+}
+.overlay #page {
+  padding: 0 2em;
+}
+.overlay #skip-link,
+.overlay #header,
+.overlay #page-title,
+.overlay #featured,
+.overlay #sidebar-first,
+.overlay #footer-wrapper,
+.overlay #triptych-wrapper {
+  display: none;
+}
