@@ -1,5 +1,3 @@
-/* @override http://sky.d7/sites/sky.d7/themes/Bartik/css/style.css?Z */
-
 /* $Id$ */
 
 /* ---------- Overall Specifications ---------- */
@@ -757,3 +755,5 @@ div.password-suggestions {
   right: auto;
   top: auto;
 }
+
+/* -------------- Admin Area ------------- */
