@@ -1,3 +1,5 @@
+/* @override http://sky.d7/sites/sky.d7/themes/Bartik/css/style.css?Z */
+
 /* $Id$ */
 
 /* ---------- Overall Specifications ---------- */
@@ -742,4 +744,16 @@ div.password-suggestions {
 .sample-regions-link {
   font-size: 12px;
   font-family: Arial, sans-serif;
+}
+
+/* -------------- Shortcut Links ------------- */
+.add-or-remove-shortcuts {
+  position: absolute;
+  right: 0.25em;
+  top: 0.25em;
+}
+.overlay .add-or-remove-shortcuts {
+  position: static;
+  right: auto;
+  top: auto;
 }
