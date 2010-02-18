@@ -624,26 +624,25 @@ div.tabs ul.primary li a {
 
 #messages {
   padding: 20px 0 5px;
+  margin: 0 auto;
+  width: 900px;
 }
 div.messages {
+  border: 1px solid #bbb;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 15px;
+  margin: 0 0 15px 0;
 }
 div.status {
   background: #fcf6be;
-  border: 1px solid #bbb;
-  margin: 0 auto;
-  padding: 15px;
-  width: 900px;
+}
+div.warning {
+  background: #ffd; /* Drupal default */
 }
 div.error {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 20px auto;
-  padding: 20px;
-  width: 900px;
+  background: #fcc; /* Drupal default */
 }
-.region-featured #messages {
-  background: #d2d2d2;
-}
+
 
 /* -------------- User Profile   -------------- */
 
